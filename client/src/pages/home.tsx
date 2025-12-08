@@ -16,8 +16,8 @@ export default function Home() {
             Creative Developer_
           </h2>
           <h1 className="text-6xl md:text-8xl font-display font-black leading-none tracking-tighter mb-6">
-            NITESH <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">KUMAR</span>
+            Nitesh <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">Kumar</span>
           </h1>
           <p className="max-w-xl text-lg md:text-xl text-muted-foreground font-body leading-relaxed mb-10 border-l-2 border-primary/50 pl-6">
             Interactive 3D web & UX — I build neon experiences that bridge the gap between imagination and browser.
