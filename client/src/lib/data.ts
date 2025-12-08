@@ -2,6 +2,15 @@
 export const PROJECTS = [
   {
     id: 1,
+    title: "Hospital Management System",
+    category: "Web App",
+    description: "A comprehensive system for managing hospital operations including patient records, appointments, and staff management.",
+    tech: ["React", "Node.js", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800",
+    link: "#"
+  },
+  {
+    id: 2,
     title: "Neon Shop",
     category: "3D Commerce",
     description: "A fully interactive 3D product configurator for a cyberpunk streetwear brand.",
@@ -10,7 +19,7 @@ export const PROJECTS = [
     link: "#"
   },
   {
-    id: 2,
+    id: 3,
     title: "Void Terminal",
     category: "Web App",
     description: "Browser-based CLI for managing cloud infrastructure with a retro-futuristic UI.",
@@ -19,7 +28,7 @@ export const PROJECTS = [
     link: "#"
   },
   {
-    id: 3,
+    id: 4,
     title: "Synthwave FM",
     category: "Audio",
     description: "Visualizer and streaming platform for synthwave artists. Features real-time audio reactivity.",
@@ -28,7 +37,7 @@ export const PROJECTS = [
     link: "#"
   },
   {
-    id: 4,
+    id: 5,
     title: "Cyber Portfolio",
     category: "Design",
     description: "Experimental personal website exploring brutalist typography and micro-interactions.",
@@ -41,20 +50,27 @@ export const PROJECTS = [
 export const EXPERIENCE = [
   {
     id: 1,
+    role: "Frontend Developer",
+    company: "Stackskills",
+    period: "2 Months",
+    description: "Worked on frontend development projects, implementing responsive designs and interactive features."
+  },
+  {
+    id: 2,
     role: "Frontend Engineer",
     company: "Pixel Lab",
     period: "2024 - Present",
     description: "Leading the transition to 3D web interfaces. Built a proprietary WebGL engine for product visualization."
   },
   {
-    id: 2,
+    id: 3,
     role: "Creative Developer",
     company: "Neon Agency",
     period: "2022 - 2024",
     description: "Developed award-winning campaign sites for major tech brands. Specialized in scroll-linked animations."
   },
   {
-    id: 3,
+    id: 4,
     role: "UI Designer",
     company: "Freelance",
     period: "2020 - 2022",
