@@ -1,0 +1,96 @@
+REPLIT AGENT TASK: Build a complete, runnable *Next.js + TypeScript* portfolio website with a Gen-Z dark rave theme. Use *three.js (@react-three/fiber + @react-three/drei)* for 3D visuals and *barba.js* for smooth page transitions. The output must be real code and file structure — ready to run on Replit (or npm run dev). *Do not output long explanations* — only create files and code.
+
+--- PROJECT SUMMARY ---
+Name: [PLACEHOLDER_NAME]
+Theme: Gen-Z dark rave — neon glows, deep blacks, electric purples/pinks, kinetic motion, occasional CRT/scanline vibes.
+Stack: Next.js (app/pages ok) + TypeScript, React, @react-three/fiber, @react-three/drei, three, barba.js, framer-motion, TailwindCSS (configured), postcss, autoprefixer.
+Design constraints: fast, accessible (WCAG AA), SEO meta tags, responsive (mobile-first), 60fps animations where possible, minimal bundle cost (code-splitting + dynamic imports).
+
+--- WHAT YOU MUST OUTPUT ---
+Create these files (at minimum) with full working code:
+- package.json (scripts: dev, build, start, lint)
+- next.config.js & tsconfig.json
+- postcss.config.js, tailwind.config.js, globals.css
+- pages/_app.tsx (global layout + barba.js integration for page transitions)
+- pages/_document.tsx (for fonts, meta)
+- pages/index.tsx (Home / Hero with 3D background)
+- pages/about.tsx (About / education / skills)
+- pages/projects.tsx (Projects grid with filters + 3D preview modal)
+- pages/experience.tsx (timeline)
+- pages/contact.tsx (interactive contact form + resume download)
+- components/Header.tsx, Footer.tsx, NavAnimated.tsx
+- components/ThreeBackground.tsx (3D animated rave scene using react-three/fiber, with toggle for reduced motion)
+- components/ProjectCard.tsx (project preview + small three.js thumbnail using Canvas)
+- components/AnimatedCursor.tsx (optional neon cursor + accessible off switch)
+- components/MusicPlayer.tsx (play/pause ambient synth — default off; provide a mute toggle)
+- lib/projects.ts (example projects array with metadata)
+- public/placeholder-profile.jpg and /favicon.ico (placeholder assets)
+- README.md with local dev steps and deployment notes
+
+--- DEPENDENCIES (install these) ---
+"next", "react", "react-dom",
+"typescript", "@types/react", "@types/node",
+"three", "@react-three/fiber", "@react-three/drei",
+"barba.js", "framer-motion",
+"tailwindcss", "postcss", "autoprefixer",
+"clsx" (or "classnames"),
+"axios" (for contact optional),
+"@types/barba__core" or typed wrapper if available (if not, add minimal d.ts).
+
+--- BEHAVIOR & UX REQUIREMENTS ---
+1. Hero (index): full-viewport 3D animated scene (ThreeBackground) behind glassmorphism content. Big name, short tagline, CTA to Projects. Subtle parallax based on pointer. Include "Prefer reduced motion" detection and a toggle in UI.
+2. Page transitions: Use barba.js to create fluid cross-fade + slide + neon trail between pages. Ensure transitions work with Next.js router; load barba only client-side. Add fallback if JS disabled (basic links).
+3. Navigation: sticky top nav with mobile hamburger. Show active page (neon underline animation).
+4. Projects: grid with filters (all / web / 3D / ui). Each card opens modal with extended details and a live 3D preview (lazy-loaded).
+5. Experience: timeline component with animated reveal as you scroll (use framer-motion while respecting reduced motion).
+6. Contact: accessible form (labels, ARIA), validation, and a "copy email" button + resume download link. No backend required — show how to plug in Netlify Forms or an API route.
+7. Unique features:
+   - Shader-based neon gradient background in ThreeBackground or postprocessing bloom.
+   - Beat-reactive elements: subtle scale/pulse linked to an audio analyser of the MusicPlayer if music is enabled (must be opt-in).
+   - Keyboard navigation and focus states clearly visible.
+   - Toggleable "CRT / scanlines" aesthetic layer as a theme option.
+   - A small, optional terminal-like "cheat sheet" overlay that lists key skills and contact shortcuts.
+8. Styles: use Tailwind for layout + custom CSS for shaders and advanced effects. Include dark rave color tokens in tailwind config.
+9. Performance: use dynamic imports for heavy components (react-three/fiber scenes, audio), and next/image or optimized static images for profile/project images. Minimize initial bundle.
+10. Accessibility & SEO: proper meta tags, open graph tags, semantic HTML, keyboard focus, alt text on images, and an accessible skip-to-content link.
+11. Tests: add at least one simple unit test (jest/ts-jest optional) or provide instructions in README to run Lighthouse.
+
+--- FILE & CODE STANDARDS ---
+- All files must be TypeScript (.tsx/.ts).
+- Keep code modular and commented where nontrivial behavior occurs.
+- Use functional components and hooks.
+- Use useEffect guards so Three.js and barba initialize only on client.
+- Provide example content for: name, tagline, 6 sample projects (with repo/demo links), education entries, 3 experience entries, and a skills list (JS/TS, React, Three.js, Node, CSS, UI/UX).
+- Provide clear README with commands:
+  - npm install
+  - npm run dev
+  - npm run build
+  - npm run start
+
+--- STRICT OUTPUT FORMAT ---
+1. Create the files listed above with complete code.  
+2. When generating code, *do not print explanatory paragraphs*. Only file content and file paths.  
+3. Use placeholders for personal data — mark them clearly like: /* YOUR NAME HERE */ so I can replace later.
+
+--- EXAMPLE CONTENT (use these as defaults) ---
+Name: Alex Nova
+Tagline: "Interactive 3D web & UX — I build neon experiences"
+Skills: TypeScript, Next.js, React, Three.js, Framer Motion, TailwindCSS
+Sample Project: "Neon Shop — 3D product configurator" (link placeholder)
+Education: B.Sc. Computer Science, 2023
+Experience: Frontend Intern at Pixel Lab — 2024 — Built 3D UI components
+Contact email placeholder: alex.nova@example.com
+
+--- EXTRA DEV NOTES FOR AGENT (implement these) ---
+- Use dynamic import for ThreeBackground: const ThreeBackground = dynamic(() => import('../components/ThreeBackground'), { ssr: false })
+- Wrap barba initialization inside useEffect(() => { if (typeof window !== 'undefined') { ... }}, [])
+- Provide components/three/NeonShader.tsx or inline shader code for neon gradient and scanlines with comments.
+- Implement a simple audio analyser only if user toggles MusicPlayer; otherwise keep it off.
+- Provide a utils/usePrefersReducedMotion.ts hook.
+- Ensure pages are linkable (unique canonical URLs and og:image placeholders).
+- Include a minimal ESLint config in package.json scripts if possible.
+
+--- DELIVERABLE ---
+Produce the full project file tree and complete code files inline so I can run the app immediately. No follow-up questions — generate the code now.
+
+END OF PROMPT
