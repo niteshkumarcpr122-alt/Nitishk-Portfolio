@@ -51,11 +51,15 @@ export default function Contact() {
             <div className="space-y-4 mb-12 font-mono text-sm">
               <div className="flex items-center gap-4">
                 <span className="text-primary">EMAIL</span>
-                <a href="mailto:alex.nova@example.com" className="hover:text-white transition-colors">alex.nova@example.com</a>
+                <a href="mailto:niteshkumarcpr122@gmail.com" className="hover:text-white transition-colors">niteshkumarcpr122@gmail.com</a>
               </div>
               <div className="flex items-center gap-4">
-                <span className="text-secondary">SOCIAL</span>
-                <span className="text-muted-foreground">@alexnova_dev</span>
+                <span className="text-secondary">PHONE</span>
+                <span className="text-muted-foreground">9142663006</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="text-accent">ADDRESS</span>
+                <span className="text-muted-foreground">Rajendra Nagar, Patna</span>
               </div>
             </div>
 

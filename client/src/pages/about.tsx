@@ -15,7 +15,7 @@ export default function About() {
             </h1>
             <div className="space-y-6 text-lg text-muted-foreground font-body">
               <p>
-                Hello! I'm Alex Nova, a creative developer with a passion for building immersive digital experiences. My journey started with a fascination for video game UIs and evolved into creating performant, interactive websites.
+                Hello! I'm Nitesh Kumar, a creative developer with a passion for building immersive digital experiences. My journey started with a fascination for video game UIs and evolved into creating performant, interactive websites.
               </p>
               <p>
                 I specialize in the intersection of design and engineering, ensuring that every pixel serves a purpose and every interaction feels magical.

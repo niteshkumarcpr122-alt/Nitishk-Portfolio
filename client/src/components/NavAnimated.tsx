@@ -25,7 +25,7 @@ export default function NavAnimated() {
           {/* Logo */}
           <Link href="/">
             <a className="font-display text-2xl font-bold tracking-widest hover:text-primary transition-colors duration-300">
-              ALEX<span className="text-primary">NOVA</span>
+              NITESH<span className="text-primary">KUMAR</span>
             </a>
           </Link>
 
