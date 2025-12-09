@@ -44,6 +44,29 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Separate three.js and related 3D libraries into their own chunk
+          "three-libs": ["three", "@react-three/fiber", "@react-three/drei"],
+          // Separate UI component libraries
+          "radix-ui": [
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-alert-dialog",
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-popover",
+            "@radix-ui/react-select",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-toast",
+            "@radix-ui/react-tooltip",
+          ],
+          // Separate form libraries
+          "form-libs": ["react-hook-form", "@hookform/resolvers", "zod"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000, // Increase limit to 1MB per chunk
   },
   server: {
     host: "0.0.0.0",
