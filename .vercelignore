@@ -1,0 +1,14 @@
+node_modules
+.git
+.env
+.env.local
+dist
+*.log
+.cache
+Nextjs-Typ
+attached_assets
+PUSH_TO_GITHUB.md
+VERCEL_DEPLOYMENT_FIX.md
+VERCEL_DEPLOY_STEPS.md
+deploy.ps1
+
