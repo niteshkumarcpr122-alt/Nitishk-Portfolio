@@ -73,7 +73,17 @@ export default function ThreeBackground() {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none bg-background">
       <Suspense fallback={null}>
-        <Canvas camera={{ position: [0, 0, 1] }}>
+        <Canvas 
+          camera={{ position: [0, 0, 1] }}
+          gl={{ 
+            antialias: true,
+            alpha: true,
+            powerPreference: "high-performance",
+            failIfMajorPerformanceCaveat: false
+          }}
+          dpr={[1, 2]}
+          frameloop="always"
+        >
           <fog attach="fog" args={['#050510', 0, 3]} />
           <ParticleField />
           <FloatingShapes />
